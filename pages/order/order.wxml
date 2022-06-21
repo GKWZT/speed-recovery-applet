@@ -1,0 +1,51 @@
+<view style="background-color: #f8f8f8;min-height: 2000rpx;">
+   <view style="margin-bottom: -40rpx;visibility: hidden;">1</view>
+    <view wx:for="{{Order}}" wx:for-item="orders" wx:key="none">
+     <!-- 已取消的订单 -->
+        <view bindtap="switchDetail" wx:if="{{orders.isCancel===true}}"  data-id="{{orders.orderId}}">
+            <view class="cancelOrder">
+                <view style="padding-top:18rpx;color: #ffffff;">{{orders.orderWaitMessage}}
+                </view>
+            </view>
+            <view class="orders" class="orderId">
+            订单号：{{orders.orderId}}
+                <view style="display: inline;margin-left: 70rpx;font-size: 12pt;color:#aeaeae">已取消</view>
+            </view>
+        </view>
+        <view wx:else>
+            <view>
+                <view bindtap="switchDetail" data-id="{{orders.orderId}}" style="margin: 0 20rpx; height:80rpx; padding: 0 30rpx;border-radius: 17rpx;background-color: {{OrderMessage.orderWaitColor}};flex: 1;margin-top: 30rpx;">
+                    <view style="padding-top:18rpx;color: #ffffff;">
+                        <view wx:if="{{orders.isCancel===false}}">
+                            {{orders.orderWaitMessage}}      
+                        </view>
+                        <view wx:if="{{orders.isCancel===true}}">
+                            {{orders.orderWaitMessage}}
+                        </view>
+                    </view>
+                </view>
+                <view bindtap="switchDetail" data-id="{{orders.orderId}}" class="orders">
+                订单号：{{orders.orderId}}
+                    <view style="display: inline;margin-left: 70rpx;font-size: 12pt;color:#616161">待服务</view>
+                    <view style="margin: 20rpx;display:flex;">
+                        <image style="border-radius: 50%;width: 80rpx;height: 80rpx;" src="{{OrderMessage.imgSrc}}"></image>
+                        <view class="orderMessage">零点已接单，正在快马加鞭赶来！</view>
+                    </view>
+                </view>
+                <view style="position: relative;top: -80rpx;right: -40rpx;height: 0;">
+                    <view class="cancelOrderTap" >
+                        <picker bindchange="cancelOrder" value="{{0}}" range="{{array}}" data-index="{{orders.orderId}}">
+                            取消订单
+                        </picker>
+                    </view>
+                    <view class="callPhone" bindtap="callPhone">联系回收员</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="loaded">已加载完成</view>
+
+    
+    
+</view>
+

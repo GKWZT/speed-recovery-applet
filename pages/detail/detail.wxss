@@ -1,0 +1,22 @@
+/* pages/detail/detail.wxss */
+.orders{
+    margin: 0 20rpx;
+    padding: 20rpx;
+    padding-left: 25rpx;
+    font-size: 11pt;
+    color: #aeaeae;
+    background-color: #ffffff;
+    height: 200rpx;
+    position: relative;
+    top: -3rpx;
+    border-radius: 20rpx;
+    border-top-left-radius: 0rpx;
+    border-top-right-radius: 0rpx;
+}
+.orderMessage{
+    display: inline-block;
+    margin: 0 20rpx;
+    position: relative;
+    top: 25rpx;
+    color: #000000;
+}

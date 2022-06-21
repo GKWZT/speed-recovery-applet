@@ -1,0 +1,15 @@
+<view bindtap="test" style="background-color: #f8f8f8;min-height: 1500rpx;">
+    <view style="height: 5rpx;background-color: #f8f8f8;"></view>
+    <view  style="font-size: 10pt;border-bottom: 1rpx solid #aeaeae;" wx-if="{{cancelOrderList<1}}">暂无订单消息</view>
+    
+        <view wx:for="{{cancelOrderList}}" wx:for-item="orders" wx:key="cancelOrderList">
+            <view style="margin: 15rpx 0;background-color: #ffffff;padding: 25rpx;padding-left: 30rpx;">
+                <text style="font-weight: bold;font-size: 11pt;">取消订单</text>
+                <text style="position: relative;left: 260rpx;color: #aeaeae;font-size: 11pt;">{{orders.cancelOrderTime}}</text>
+                <view style="margin: 20rpx 0;font-size: 10pt;">
+                订单编号：{{orders.orderId}}，您已取消该订单
+                </view>
+            </view>
+         </view>
+</view>
+

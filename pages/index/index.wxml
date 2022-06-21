@@ -1,0 +1,107 @@
+<view class="container" style="background-color: #f8f8f8;">
+    <!-- 顶部背景 -->
+    <view class="nav-bar-bg-color"></view>
+    <view class="nav-bar-bg-color2"></view>
+    <!-- 顶部定位 -->
+    <view class="top-section flex flex-align-center flex-pack-justify">
+        <view bindtap="" class="position-section" bindtap="selectPosition">
+            <image style="width: 25rpx;height: 25rpx;margin-left: 15rpx;margin-right: 5rpx;" src="/static/home/weizhi2.png"></image>
+            
+            <text style="font-size: 11pt;" class="current-position">{{addressName}}</text>
+        </view>
+        <!-- <view class="rider-section">
+        <text wx:if="{{addressName.length>16}}"  style="font-size: 10pt;" class="current-position">2位回收人员</text>
+        <text wx:if="{{addressName.length<16}}"  style="font-size: 12pt;" class="current-position">2位回收人员</text>
+        </view> -->
+    </view>
+    <!-- 幻灯片 -->
+    <swiper class="banner" current="{{currentIndex}}" circular="true" indicator-dots="true" previous-margin="50rpx" next-margin="50rpx" bindchange="bindchange">
+    <swiper-item wx:for="{{banners}}" wx:for-index="index" wx:for-item="item" wx:key="id"> <image src="{{item.src}}" mode="widthFix" class="{{currentIndex == index?'active':''}}"/> </swiper-item>
+    </swiper>
+    <!-- <view style="background-color: #f8f8f8;width: 150rpx;width:100%;height: 30px;"></view> -->
+    <!-- banner -->
+    <view class="" style="min-width:750rpx;background-color: #f8f8f8;">
+        <!-- navigator组件方式 -->
+        <navigator hover-class="none" style="display: flex;background-color: #ffffff;" >
+            <view style="margin-top:10px;display: flex;height: 160rpx; min-width:750rpx;background-color: #ffffff;position: absolute;border-radius: 25px;">
+                <view style="width: 4%;background-color: #f8f8f8;"></view>
+                <view style="width: 48%;background-color: #ffeadd;margin: 5px;margin-top: 16px;margin-bottom: 10px;border-radius: 30rpx;">
+                    <image style="float:left;width:33%;width: 90rpx;height: 90rpx;margin-top: 8rpx;margin-left: 10rpx;padding-right: 10rpx;" class="img" src="/static/home/lajixiang.png"  mode="widthFix"></image>
+                    <view style="font-size: 10pt;color: #ffb599;margin-top: 6px;font-weight: bold;">纸品类回收</view>
+                    <text style="font-size: 8pt;color: #e7b4a3;">今日参与人数394</text>
+                </view>
+                <view style="width: 1%;background-color: white"></view>
+                <view style="width: 48%;background-color: #f8e9d6;margin: 5px;margin-top: 16px;margin-bottom: 10px;border-top-left-radius: 30rpx;border-radius: 30rpx;">
+                    <image style="float:left;width:33%;width: 80rpx;height: 80rpx;margin-top: 8rpx;margin-left: 10rpx;padding-right: 10rpx;" class="img" src="/static/home/jiuyifu.png"  mode="widthFix"></image>
+                    <view style="font-size: 10pt;margin-top: 6px;font-weight: bold;">旧衣服回收</view>
+                    <text style="font-size: 8pt;color: #b5ac9b;margin-bottom: 5px;">今日参与人数834</text>
+                </view>
+                <view style="width: 4%;background-color: #f8f8f8;"></view>
+            </view>
+            
+        </navigator>
+        <navigator class="nav" hover-class="none" style="background-color: #f8f8f8;height: 180px;">
+            <view style="margin-top:100px;display: flex;height: 160rpx; min-width:750rpx;background-color: #ffffff;position: absolute;border-radius: 25px;">
+                <view style="width: 4%;background-color:#f8f8f8;"></view>
+                <view style="width: 22%; margin: 5px;">
+                    <view style="text-align: center;">
+                        <image src="/static/home/jinshu.png" style="width: 90rpx; height: 90rpx;"></image>
+                        <view style="font-size: 9pt;">金属类回收</view>
+                    </view>
+                </view>
+                <view style="width: 22%; margin: 5px;">
+                    <view style="text-align: center;">
+                        <image src="/static/home/suliao1.png" style="width: 90rpx; height: 90rpx;"></image>
+                        <view style="font-size: 9pt;">塑料类回收</view>
+                    </view>
+                </view>
+                <view style="width: 22%; margin: 5px;">
+                    <view style="text-align: center;">
+                        <image src="/static/home/dianqi1.png" style="width: 90rpx; height: 90rpx;"></image>
+                        <view style="font-size: 9pt;">电器类回收</view>
+                    </view>
+                </view>
+                <view style="width: 26%; margin: 5px;">
+                    <view style="text-align: center;">
+                        <image src="/static/home/qitawupin.png" style="width: 90rpx; height: 90rpx;"></image>
+                        <view style="font-size: 9pt;">其他物品回收</view>
+                    </view>
+                </view>
+                <view style="width: 4%;background-color:#f8f8f8;"></view>
+            </view>
+        </navigator>
+    </view>
+    <view style="min-width:700rpx;margin:20rpx;border-radius: 20px;">
+        <view style="padding: 10rpx;background-color: #e9f8fb;font-size:11pt;">
+            <image src="/static/home/laba1.png" style="vertical-align: -5rpx;height: 35rpx; width: 36rpx;"></image>
+            尊敬的用户，欢迎来到数速回收
+        </view>
+    </view>
+    <view style="min-width:720rpx;margin:10rpx;border-radius: 20px;height: 500rpx;">
+        <view style="height: 410rpx; min-width:720rpx;background-color: #ffffff;position: absolute;border-radius: 10px;margin-right:20rpx">
+        <view style="font-size:13pt;margin-top: 35rpx;margin-left: 15rpx;font-weight: bolder;">玩转数速回收</view>
+        <view style="display: flex;margin: 20rpx;">
+            <view style="width: 320rpx;height: 122rpx;background-color: #c885f8;border-radius: 10px;padding: 15rpx;">
+                <text style="margin: 20rpx;font-size: 13pt;color: #ffffff;font-weight: bolder;">积分商城\n</text>
+                <text style="margin: 20rpx;font-size: 10pt;color: #ffffff;">更多免费福利</text>
+            </view>
+            <view style="width: 28rpx;"></view>
+            <view style="width: 320rpx;height: 122rpx;background-color: #fc7a56;border-radius: 10px;padding: 15rpx;">
+                <text style="margin: 20rpx;font-size: 13pt;color: #ffffff;font-weight: bolder;">闲置商城\n</text>
+                <text style="margin: 20rpx;font-size: 10pt;color: #ffffff;">更多开心捡漏</text>
+            </view>
+        </view>
+        <view bindtap="callPhone" style="display: flex;margin: 20rpx;">
+            <view style="width: 320rpx;height: 122rpx;background-color: #fe8388;border-radius: 10px;padding: 15rpx;">
+                <text style="margin: 20rpx;font-size: 13pt;color: #ffffff;font-weight: bolder;">服务咨询\n</text>
+                <text style="margin: 20rpx;font-size: 10pt;color: #ffffff;">专业客服解答</text>
+            </view>
+            <view style="width: 28rpx;"></view>
+            <view bindtap="callPhone" style="width: 320rpx;height: 122rpx;background-color: #45e57b;border-radius: 10px;padding: 15rpx;">
+                <text style="margin: 20rpx;font-size: 13pt;color: #ffffff;font-weight: bolder;">热线电话\n</text>
+                <text style="margin: 20rpx;font-size: 10pt;color: #ffffff;">专业客服解答</text>
+            </view>
+        </view>
+    </view>
+    </view>
+</view>

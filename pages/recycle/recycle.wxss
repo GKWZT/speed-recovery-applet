@@ -1,0 +1,62 @@
+.recycle-contain{
+  background-color: #ebf5f6;
+  height: 1500rpx;
+}
+.recycle-banner{
+  align-items: center;
+  margin: 0 60rpx;
+  margin-top: -20rpx;
+}
+.recycle-banner-image{
+  height:220rpx;
+  width:620rpx;
+}
+.recycle-options{
+  margin: 0 10rpx;
+  border: 1rpx solid #f8f8f8;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+.nav{
+  background-color: #ffffff;
+  height: 80px;
+  display: flex;
+}
+#paperClass{
+  width: 22%; 
+  margin: 5px;
+  margin-left:-10rpx;
+  padding: 17rpx;
+  margin-bottom: -10rpx;
+}
+.options-image{
+  width: 90rpx; 
+  height: 90rpx;
+}
+.options-true{
+  font-size: 6pt;
+  position: relative;
+  top: -150rpx;
+  right: -73rpx;
+  color: #ffffff;
+  width: 35rpx;
+  height: 35rpx;
+  
+  padding: 2rpx;
+  padding-left: 21rpx;
+  padding-top: 1rpx;
+}
+.options-world{
+  font-size: 9pt;
+}
+
+
+.navAddress{
+  margin: 0 10rpx;
+  margin-top: 15rpx;
+  border: 1rpx solid #f8f8f8;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  display: flex;
+}

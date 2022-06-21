@@ -1,0 +1,32 @@
+.nav-bar-bg-color{
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  right: 0; 
+  height: 260rpx; 
+  background-color:#27ce8b;
+}
+.nav-bar-bg-color2{
+  position: absolute; 
+  left: 0; 
+  top: 260rpx; 
+  right: 0; 
+  height: 175rpx; 
+  background-color:#f8f8f8;
+}
+.top-section{width: 750rpx; 
+  padding: 6rpx 20rpx;
+  position: relative;
+  color: #FFF;
+}
+
+.banner{width: 750rpx; height: 375rpx;}
+.recovery-count{
+  width: 750rpx;
+  height: 100rpx;
+  font-size: 11 pt;
+}
+.banner image{width: 100%; transform: scale(0.92);border-radius: 30rpx;}
+.banner .active{transform: scale(1);}
+.navs .item image{width:100%;}
+.navs .item text{font-size: 28rpx;color: #333;margin-top: 10rpx;}

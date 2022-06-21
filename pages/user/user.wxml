@@ -1,0 +1,38 @@
+<!-- style="min-height: 1200rpx;background-color: #dfdfdf;" -->
+<view class="user">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{avatarUrl}}"></image>
+    <text class="userinfo-nickname" bindtap="getUserProfile">{{nickName}}</text>
+  </view>
+  <view class="userCredit"> 
+    <view class="userCredit-sanjiao">
+        <view>
+          <image src="/static/home/sanjiao.png"></image>
+        </view>
+        <view class="userCredit-sanjiao-world">回收物品</view>
+        <view class="userCredit-sanjiao-worldk">0千克</view>
+    </view>
+    <view>
+        <view class="userCredit-tanjianpai">
+          <image src="/static/home/tanjianpai.png"></image>
+        </view>
+        <view class="userCredit-tanjianpai-world">减少碳排量</view>
+        <view class="userCredit-tanjianpai-worldk">0千克</view>
+    </view>
+    <view>
+        <view class="userCredit-tanzhonghe">
+          <image src="/static/home/tanzhonghe.png"></image>
+        </view>
+        <view class="userCredit-tanzhonghe-world">碳中和</view>
+        <view class="userCredit-tanzhonghe-worldk">0千克</view>
+    </view>
+    <view>
+        <view class="userCredit-shu">
+          <image src="/static/home/shu.png"></image>
+        </view>
+        <view class="userCredit-shu-world">保护树木</view>
+        <view class="userCredit-shu-worldk">0棵</view>
+    </view>
+  </view>
+  
+</view>

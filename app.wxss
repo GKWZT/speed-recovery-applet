@@ -1,0 +1,20 @@
+view,text,input,scroll-view,swiper{box-sizing: border-box;}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+
+.flex{display:flex;}
+.flex-v{flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;}
+.flex-row-wrap{flex-flow:row wrap;}
+.flex-1{flex:1;}
+.flex-align-center{align-items:center;}
+.flex-pack-center{justify-content:center;}
+.flex-pack-justify{justify-content:space-between;}
+.flex-pack-around{justify-content:space-around;}
+.block{width: 710rpx;}
+.text-center{text-align: center;}

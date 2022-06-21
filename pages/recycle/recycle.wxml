@@ -1,0 +1,124 @@
+<view class="recycle-contain">
+    <view class="recycle-banner">
+        <image class="recycle-banner-image" src="/static/home/re-banner.png"></image>
+    </view>
+    <view class="recycle-options">
+        <text style="color: #ffa508;">选择回收品类</text>
+        <view>
+            <view class="nav" hover-class="none">
+                <!-- 纸品类，包含框 -->
+                <view id="paperClass" bindtap="checkedPaper" style="border: 1rpx solid {{checkPaperColor}};box-shadow:0 0.05em 0.05em {{checkPaperColor}};">
+                    <view style="text-align: center;">
+                        <image class="options-image" src="/static/home/lajixiang.png"></image>
+                        <view class="options-world">纸品类</view>
+                        <view class="options-true" style="background: linear-gradient(45deg,rgba(255, 255, 255, 0) 50%,{{checkPaperColor}} 50%,{{checkPaperColor}} 100%);">√</view> 
+                    </view>
+                </view>
+                <view id="ClothesClass" bindtap="checkedClothes" style="width: 22%; margin: 5px;border: 1rpx solid {{checkClothesColor}}; padding: 17rpx;margin-bottom: -10rpx;box-shadow:0 0.05em 0.05em {{checkClothesColor}};">
+                    <view style="text-align: center;">
+                        <image class="options-image" src="/static/home/jiuyifu.png"></image>
+                        <view class="options-world">旧衣服</view>
+                        <view class="options-true" style="background: linear-gradient(45deg,rgba(255, 255, 255, 0) 50%,{{checkClothesColor}} 50%,{{checkClothesColor}} 100%);">√</view>
+                    </view>
+                </view>
+                <view bindtap="checkedMetal" style="width: 22%; margin: 5px;border: 1rpx solid {{checkMetalColor}}; padding: 17rpx;margin-bottom: -10rpx;box-shadow:0 0.05em 0.05em {{checkMetalColor}};">
+                    <view style="text-align: center;">
+                        <image class="options-image" src="/static/home/jinshu.png"></image>
+                        <view class="options-world">金属类</view>
+                        <view class="options-true" style="background: linear-gradient(45deg,rgba(255, 255, 255, 0) 50%,{{checkMetalColor}} 50%,{{checkMetalColor}} 100%);">√</view>
+                    </view>
+                </view>
+                <view bindtap="checkedPlastic" style="width: 22%; margin: 5px;border: 1rpx solid {{checkPlasticColor}}; padding: 17rpx;margin-bottom: -10rpx;box-shadow:0 0.05em 0.05em {{checkPlasticColor}};">
+                    <view style="text-align: center;">
+                        <image class="options-image" src="/static/home/suliao1.png"></image>
+                        <view class="options-world">塑料类</view>
+                        <view class="options-true" style="background: linear-gradient(45deg,rgba(255, 255, 255, 0) 50%,{{checkPlasticColor}} 50%,{{checkPlasticColor}} 100%);">√</view>
+                    </view>
+                </view>
+                <view bindtap="checkedEleApp" style="width: 22%; margin: 5px;border: 1rpx solid {{checkEleAppColor}}; padding: 17rpx;margin-bottom: -10rpx;box-shadow:0 0.05em 0.05em {{checkEleAppColor}};">
+                    <view style="text-align: center;">
+                        <image class="options-image" src="/static/home/dianqi1.png"></image>
+                        <view class="options-world">旧电器</view>
+                        <view class="options-true" style="background: linear-gradient(45deg,rgba(255, 255, 255, 0) 50%,{{checkEleAppColor}} 50%,{{checkEleAppColor}} 100%);">√</view>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+    <view class="navAddress" bindtap="Address">
+        <view style="padding:30rpx;">
+            <image style="width: 30rpx;height: 30rpx;" src="/static/home/weizhi.png"></image>
+            <text>\t{{addressInfo.provinceName}}{{addressInfo.cityName}}{{addressInfo.countyName}}\n</text>
+            <text style="margin-left: 38rpx;font-size: 9pt;color: #999999;">\t{{addressInfo.detailInfo}}\n</text>
+            <text style="margin-left: 38rpx;margin-right:20rpx;font-size: 9pt;color: #999999;">{{addressInfo.userName}}</text><text style="font-size: 9pt;color: #999999;">{{addressInfo.telNumber}}</text>
+        </view>
+        <view>
+            <image src="/static/home/dizhibu.png" style="width: 100rpx;height: 100rpx;margin-left: 40rpx;padding-top: 40rpx;position: absolute;right: 80rpx;"></image>
+        </view>
+    </view>
+    <view style="margin: 0 10rpx;margin-top: 15rpx;border: 1rpx solid #f8f8f8;background-color: #ffffff;border-radius: 10rpx;">
+        <view style="padding:20rpx;">
+            <view style="padding-bottom: 20rpx;font-size: 10pt;color: #ffa508;">\t选择预估重点(结算价格以实际为准)\n</view>
+            <view style="font-size: 10pt;margin-top: 30rpx;">
+                <text bindtap="choiceTen" style="border: 1px solid #27ce8b;padding: 6rpx;margin-right: 10rpx;background-color: {{choiceTenColor}};border-top-left-radius: 10rpx;padding-top:20rpx;border-top-right-radius: 10rpx;color: {{choiceTenTextColor}};font-weight: bold;">10-20公斤\t</text>
+                
+                <text bindtap="choiceTwenty" style="padding: 6rpx;padding-top:20rpx;margin-right: 10rpx;border: 1px solid #27ce8b;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;background-color: {{choiceTwentyColor}};font-weight: bold;color: {{choiceTwentyTextColor}};">20-50公斤</text>
+                <text bindtap="choiceFifty" style="border: 1px solid #27ce8b;padding: 6rpx;padding-top:20rpx;margin-right: 10rpx;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;background-color: {{choiceFiftyColor}};font-weight: bold;color: {{choiceFiftyTextColor}};">50-100公斤</text>
+                <text bindtap="choiceHundred" style="border: 1px solid #27ce8b;padding: 6rpx;padding-top:20rpx;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;background-color: {{choiceHundredColor}};font-weight: bold;color: {{choiceHundredTextColor}}">100公斤以上</text>
+            </view>
+            <view style="border: 1px solid #27ce8b;background-color: #27ce8b;margin-top: 6rpx;margin-right: 10rpx;border-bottom-left-radius: 10rpx;border-bottom-right-radius: 10rpx;border-top-right-radius: 10rpx;">
+                <view style="margin: 15rpx; display: flex;background-color: #ffffff;border-radius: 11rpx;">
+                    <view style="padding: 10rpx;">
+                        <text style="padding: 10rpx;margin-bottom: 0rpx; font-size: 10pt;font-weight: bold;">预计收益\n</text>
+                        <image style="margin-top: 8rpx; width: 30rpx;height: 30rpx;text-align: center;" src="/static/home/money.png"></image>
+                        <text style="padding: 10rpx;font-size: 10pt;font-weight: bold;color: #ffa508;">{{choiceMoneyText}}</text>
+                </view>
+                <!-- 中间竖线 -->
+                <view style="margin-right: 20rpx;margin-left: 30rpx;margin-top:13rpx;border-left: 1px solid #f3f3f3;height: 80rpx;"></view>
+                    <view style="padding: 10rpx;">
+                        <text style="padding: 10rpx;font-size: 10pt;font-weight: bold;">预计获得小能积分\n</text>
+                        <image style="margin-top: 8rpx; width: 30rpx;height: 30rpx;" src="/static/home/star.png"></image>
+                        <text style="margin-left:10rpx;font-size: 10pt;font-weight: bold;color: #ffa508;">{{chocieCreditText}}(公益赠送翻倍)</text>
+                    </view>    
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 下单 -->
+    <view style="position: fixed; bottom: 5rpx;height: 150rpx;background-color: #ffffff;width: 100%;">
+        <view style="margin: 12rpx 50rpx;color: #999999;font-size: 10pt;">
+        确认下单自动默认<view style="display:inline-block;color: #27ce8b ;">《数速上门服务条款》</view>
+        </view>
+        <button type="primary" bindtap="onDefaultButtonClick" style="display:inline-block;width: 300rpx;margin:0 15rpx;margin-right: 80rpx;margin-left: 30rpx;background: linear-gradient(to right, #ffa508, #fcbd24);">公益捐赠</button>
+        <button bindtap="takeOrder" type="primary" style="display:inline-block;width: 300rpx;">立即下单</button>
+    </view>
+    <!-- 回收流程 -->
+    <view style="margin: 0 10rpx;margin-top: 15rpx;border: 1rpx solid #f8f8f8;background-color: #ffffff;border-radius: 10rpx;padding: 5rpx;height: 500rpx;">
+        <view style="color: #ffa508;text-align: center;font-weight: bold;font-size: 12pt;margin-top: 30rpx;margin-bottom: 30rpx ;">回收流程</view>
+        <view style="display: flex;margin: 0 50rpx;font-size: 8pt;">
+            <view style="margin: 20rpx;">
+                <image style="width: 80rpx;height: 80rpx;" src="/static/home/xiadan.png"></image>
+                <view style="margin-left: -8rpx;">手机下单</view>
+            </view>
+            <view style="position: relative;top: 40rpx;right: 15rpx;margin: 0 20rpx;"><image style="width: 30rpx;height: 30rpx;" src="/static/home/jiantou.png"></image>
+            </view>
+            <view style="margin-top: 20rpx;margin-right: 20rpx;">
+                <image style="width: 80rpx;height: 80rpx;" src="/static/home/yuyue.png"></image>
+                <view style="margin-left: -8rpx;">预约上门</view>
+            </view>
+            <view style="position: relative;top: 40rpx;right: 15rpx;margin: 0 20rpx;"><image style="width: 30rpx;height: 30rpx;" src="/static/home/jiantou.png"></image>
+            </view>
+            <view style="margin-top: 20rpx;margin-right: 20rpx;">
+                <image style="width: 80rpx;height: 80rpx;" src="/static/home/shangmenfuwu.png"></image>
+                <view style="margin-left: -8rpx;">上门回收</view>
+            </view>
+            <view style="position: relative;top: 40rpx;right: 15rpx;margin: 0 20rpx;"><image style="width: 30rpx;height: 30rpx;" src="/static/home/jiantou.png"></image>
+            </view>
+            <view style="margin-top: 20rpx;">
+                <image style="width: 80rpx;height: 80rpx;" src="/static/home/jiesuan1.png"></image>
+                <view style="margin-left: -8rpx;">完成结算</view>
+            </view>
+        </view>
+    </view>
+</view>

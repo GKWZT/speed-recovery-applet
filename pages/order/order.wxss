@@ -1,0 +1,80 @@
+.orders{
+    margin: 0 20rpx;
+    padding: 20rpx;
+    padding-left: 25rpx;
+    font-size: 11pt;
+    color: #aeaeae;
+    background-color: #ffffff;
+    height: 260rpx;
+    position: relative;
+    top: -3rpx;
+    border-radius: 20rpx;
+    border-top-left-radius: 0rpx;
+    border-top-right-radius: 0rpx;
+}
+
+.cancelOrder{
+    margin: 0 20rpx; 
+    height:80rpx; 
+    padding: 0 30rpx;
+    border-radius: 17rpx;
+    background-color: #b8b8b8;
+    flex: 1;
+    margin-top: 20rpx;
+}
+
+.orderId{
+    margin: 0 20rpx;
+    padding: 20rpx;
+    padding-left: 25rpx;
+    font-size: 11pt;
+    color: #aeaeae;
+    background-color: #ffffff;
+    height: 80rpx;
+    position: relative;
+    top: -3rpx;
+    border-radius: 20rpx;
+    border-top-left-radius: 0rpx;
+    border-top-right-radius: 0rpx;
+}
+
+.orderMessage{
+    display: inline-block;
+    margin: 0 20rpx;
+    position: relative;
+    top: 25rpx;
+    color: #000000;
+}
+
+.cancelOrderTap{
+    margin-left: 250rpx;
+     border-radius: 30rpx;
+      border: 1rpx solid #d6d6d6;
+      width: 180rpx;
+      height: 60rpx;
+       text-align: center;
+       padding-top: 10rpx;
+       color: #969696;
+}
+.callPhone{
+    margin-left: 100rpx; 
+    border-radius: 30rpx;
+     border: 1rpx solid #d6d6d6;
+     width: 180rpx;
+     height: 60rpx;
+      text-align: center;
+      padding-top: 10rpx;
+      color: #969696;
+      position: relative;
+      top: -60rpx;
+      left: 360rpx;
+}
+
+
+
+.loaded{
+    font-size: 9pt;
+    text-align: center;
+    color: #969696;
+    margin-top: 20rpx;
+}

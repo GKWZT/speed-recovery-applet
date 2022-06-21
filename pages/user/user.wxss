@@ -1,0 +1,69 @@
+.userinfo{
+    border-bottom: 1rpx solid #c5c5c5;
+    border-top: 5rpx solid #c5c5c5;
+  }
+  .userinfo-nickname{
+    position: relative;
+    bottom: 60rpx;
+    margin: 0 30rpx;
+  }
+  
+  .userinfo-avatar {
+    overflow: hidden;
+    width: 100rpx;
+    height: 100rpx;
+    margin: 20rpx;
+    margin-left: 50rpx;
+    border-radius: 50%;
+  }
+.userCredit{
+  padding:30rpx;
+  display: flex;
+  padding-right: 0rpx;
+  font-size: 9pt;
+}
+image{
+  height: 90rpx;
+  width: 90rpx;
+}
+
+.userCredit-sanjiao{
+  margin: 0 40rpx;
+}
+.userCredit-tanjianpai{
+  margin: 0 40rpx;
+}
+.userCredit-tanzhonghe{
+  margin: 0 40rpx;
+}
+.userCredit-shu{
+  margin: 0 40rpx;
+}
+
+.userCredit-sanjiao-world{
+  margin-left: -2rpx;
+}
+.userCredit-sanjiao-worldk{
+  margin-left: 12rpx;
+  color: #27d88b;
+}
+
+.userCredit-tanjianpai-world{
+  margin: 0 20rpx;
+}
+.userCredit-tanjianpai-worldk{
+  margin-left: 50rpx;
+  color: #27d88b;
+}
+.userCredit-tanzhonghe-world{
+  margin: 0 50rpx;
+}
+.userCredit-tanzhonghe-worldk{
+  margin-left: 55rpx;color: #27d88b;
+}
+.userCredit-shu-world{
+  margin: 0 35rpx;
+}
+.userCredit-shu-worldk{
+  margin-left: 60rpx;color: #27d88b;
+}

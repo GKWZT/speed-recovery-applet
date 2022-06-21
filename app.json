@@ -1,0 +1,59 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/recycle/recycle",
+    "pages/message/message",
+    "pages/user/user",
+    "pages/detail/detail"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于展示您当前的位置"
+    }
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "数速回收",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#2fe8bc",
+    "list": [
+        {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "/static/home/home.png",
+            "selectedIconPath": "/static/home/home-active.png"
+        },
+        {
+            "pagePath": "pages/recycle/recycle",
+            "text": "一键回收",
+            "iconPath": "/static/home/huishou-tar.png",
+            "selectedIconPath": "/static/home/huishou-tar-active.png"
+        },
+        {
+          "pagePath": "pages/order/order",
+          "text": "订单",
+          "iconPath": "/static/home/order.png",
+          "selectedIconPath": "/static/home/order-active.png"
+        },
+        {
+          "pagePath": "pages/message/message",
+          "text": "消息",
+          "iconPath": "/static/home/xiaoxi.png",
+          "selectedIconPath": "/static/home/xiaoxi-active.png"
+        },
+        {
+            "pagePath": "pages/user/user",
+            "text": "我的",
+            "iconPath": "/static/home/user.png",
+            "selectedIconPath": "/static/home/user-active.png"
+        }
+    ]
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

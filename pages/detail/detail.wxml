@@ -1,0 +1,90 @@
+<view style="background-color: #f8f8f8;min-height: 1500rpx;">
+    <view style="background-color: #f8f8f8;height: 20rpx;"></view>
+    <!-- 待服务【未取消】 -->
+    <view wx:if="{{order.isCancel===false}}" style="background-color: #ffffff;padding: 20rpx;margin: 20rpx;margin-top: 0;border-radius: 10rpx;color: #27ce8b;font-weight: bold;font-size: 13pt;">
+        <view>待服务</view>
+    </view>
+    <!-- 待服务信息【未取消】 -->
+    <view wx:if="{{order.isCancel===false}}">
+        <view style="margin-left: 70rpx;font-size: 12pt;color:#ffffff;background-color: #27ce8b;padding: 20rpx;margin: 20rpx;margin-top: 0;border-radius: 10rpx;">
+            等待回收员确认上门时间
+        </view>
+        <view style="margin: 20rpx;display:flex;background-color: #ffffff;margin-top: -20rpx;padding:40rpx;">
+                <image style="border-radius: 50%;width: 80rpx;height: 80rpx;" src="http://tu1.gditc1.cn/i/2022/06/01/ff9aac4fabf874beefccfacb1d4172b-629717eccfce9.jpg"></image>
+                <view class="orderMessage">零点已接单，正在快马加鞭赶来！
+                </view>
+         </view>
+
+            
+    </view>
+    <!-- 取消原因 【已取消】-->
+    <view wx:if="{{order.isCancel===true}}" style="background-color: #aeaeae;padding: 20rpx;margin: 20rpx;margin-top: 0;border-radius: 10rpx;padding-bottom: 0rpx;">
+        <view style="font-size: 11pt;background-color: #c5c5c5;width: 200rpx;text-align: center;position: relative; left: 490rpx;top: -20rpx;border-top-right-radius: 10rpx;border-bottom-left-radius: 10rpx;color: #424242;">您已取消订单</view>
+        <view style="position: relative;top: -30rpx;">
+            <view style="color: #ffffff;margin-bottom: 20rpx;font-size: 12pt;font-weight: bold;">已取消</view>
+            <view style="color: #ebebeb;position: relative;top: 8rpx;">原因：{{order.cancelReason}}!</view>
+        </view>
+    </view>
+    <!-- 显示预估重量 -->
+    <view style="background-color: #ffffff;margin: 20rpx;padding: 20rpx;border-radius: 10rpx;">
+        <view>
+        <text style="margin-right: 10rpx;">预估重量</text>
+        <view style="display: inline-block;">
+            <image wx:if="{{order.recycleClass[0]===1}}" style="width: 32rpx;height: 32rpx;margin-right:8rpx;margin-bottom: -5rpx;" src="/static/home/lajixiang.png"></image>
+            <image wx:if="{{order.recycleClass[1]===1}}" style="width: 32rpx;height: 32rpx;margin-right:8rpx;margin-bottom: -5rpx;" src="/static/home/jiuyifu.png"></image>
+            <image wx:if="{{order.recycleClass[2]===1}}" style="width: 32rpx;height: 32rpx;margin-right:12rpx;margin-bottom: -5rpx;" src="/static/home/jinshu.png"></image>
+            <image wx:if="{{order.recycleClass[3]===1}}" style="width: 32rpx;height: 32rpx;margin-right:12rpx;margin-bottom: -5rpx;" src="/static/home/suliao1.png"></image>
+            <image wx:if="{{order.recycleClass[4]===1}}" style="width: 32rpx;height: 32rpx;margin-right:12rpx;margin-bottom: -5rpx;" src="/static/home/dianqi1.png"></image>
+        </view>
+        <text style="position:absolute;right: 40rpx;">{{order.recycleWeight}}</text>
+        </view>
+        
+    </view>
+    <!-- 显示地址 -->
+    <view style="background-color: #ffffff;margin: 20rpx;padding: 20rpx;font-size:11pt;border-radius: 10rpx;">
+        <view>
+            <text style="margin-right: 20rpx;">{{order.recycleAddress.userName}}</text>
+            <text>{{order.recycleAddress.telNumber}}</text>
+        </view>
+        <view style="color:#aeaeae;margin-top: 20rpx;display: flex;">
+            <image src="/static/home/weizhi1.png" style="width: 30rpx;height: 30rpx;"></image>
+            <view style="padding: 10rpx;padding-top:0;margin-top: -6rpx;">{{order.recycleAddress.provinceName}}{{order.recycleAddress.cityName}}{{order.recycleAddress.countyName}},{{order.recycleAddress.detailInfo}}</view>
+        </view>
+    </view>
+    <!-- 订单号 -->
+    <view style="background-color: #ffffff;margin: 20rpx;padding: 20rpx;font-size:11pt;color: #555555;padding-bottom: 5rpx;border-radius: 10rpx;">
+        <view style="margin-bottom: 20rpx;">
+            <text style="margin-right: 235rpx;">订单号</text>
+            <text style="color: #000000;">{{order.orderId}}</text>
+        </view>
+        <view style="margin-bottom: 20rpx;">
+            <text style="margin-right: 250rpx;">下单时间</text>
+            <text style="color: #000000;">{{order.takeOrderTime}}</text>
+        </view>
+        <!-- 取消订单时间【已取消】 -->
+        <view  wx:if="{{order.isCancel===true}}" style="margin-bottom: 20rpx;">
+            <text style="margin-right: 250rpx;">取消时间</text>
+            <text style="color: #000000;">{{order.cancelOrderTime}}</text>
+        </view>
+    </view>
+    <!-- 注意事项【未取消】 -->
+    <view  wx:if="{{order.isCancel===false}}" style="background-color: #ffffff;margin: 20rpx;padding: 20rpx;font-size:10pt;color: #aeaeae;border-radius: 10rpx;">
+        <text style="margin-bottom: 10rpx;display: block;">注意事项：</text>
+        <view style="padding:6rpx;padding-left: 0;">
+            <text style="color: #9b9b9b;font-weight: bold;">1.服务时间：</text>
+            <text>回收员会第一时间与您确认上门服务时间，请确保手机通畅</text>
+        </view>
+        <view style="padding:6rpx;padding-left: 0;">
+            <text style="color: #9b9b9b;font-weight: bold;">2.订单结算：</text>
+            <text>回收员当场完成服务时，会根据品类、重量当场与您结算</text>
+        </view>
+        <view style="padding:6rpx;padding-left: 0;">
+            <text style="color: #9b9b9b;font-weight: bold;">3.免费赠送订单：</text>
+            <text>回收员在完成订单后将不会支付费用请知悉</text>
+        </view>
+        <view style="padding:6rpx;padding-left: 0;">
+            <text style="color: #9b9b9b;font-weight: bold;">4.关于重量：</text>
+            <text>小于10公斤暂不能保证上门回收</text>
+        </view>
+    </view>
+</view>

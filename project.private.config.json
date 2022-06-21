@@ -1,0 +1,25 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/test/test",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                }
+            ]
+        }
+    }
+}
