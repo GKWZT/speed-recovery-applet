@@ -1,10 +1,14 @@
 # 数速回收小程序
 
 #### 介绍
-数速回收小程序，实现互联网+进行废品回收
+这是一个带专大二学习开发了几天的数速回收小程序（作业），实现互联网+进行废品回收
+
+在以后有时间将进行重构，第一次写那么多代码，虚心请教。
+涉及到的key，templateId，envID等，请填写自己的。
 
 #### 软件架构
 软件架构说明
+小程序当中使用到了腾讯地图开发，请自行申请key
 
 
 #### 安装教程
@@ -14,6 +18,38 @@
 3.  xxxx
 
 #### 使用说明
+
+效果图如下：
+
+![输入图片说明](picture/image.png)
+
+
+![输入图片说明](picture/image2.png)
+
+
+![输入图片说明](picture/image3.png)
+
+
+![输入图片说明](picture/image4.png)
+
+
+![输入图片说明](picture/image5.png)
+
+
+![输入图片说明](picture/image6.png)
+
+
+![Image](http://tu1.gditc1.cn/i/2022/06/21/%E5%9B%BE%E7%89%871-62b1a51563ae2.png)
+
+![Image](http://tu1.gditc1.cn/i/2022/06/21/%E5%9B%BE%E7%89%872-62b1a514aa311.png)
+
+![Image](http://tu1.gditc1.cn/i/2022/06/21/%E5%9B%BE%E7%89%873-62b1a51387355.png)
+
+![Image](http://tu1.gditc1.cn/i/2022/06/21/%E5%9B%BE%E7%89%874-62b1a5164bba3.png)
+
+![Image](http://tu1.gditc1.cn/i/2022/06/21/%E5%9B%BE%E7%89%875-62b1a516d79c4.png)
+
+![Image](http://tu1.gditc1.cn/i/2022/06/21/%E5%9B%BE%E7%89%876-62b1a51645cc0.png)
 
 1.  xxxx
 2.  xxxx
